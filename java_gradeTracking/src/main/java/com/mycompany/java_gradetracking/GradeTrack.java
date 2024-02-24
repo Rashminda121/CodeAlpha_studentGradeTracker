@@ -293,17 +293,22 @@ public class GradeTrack extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     String name;
-    int subject1=0;
-    int subject2=0;
-    int subject3=0;
-    
-    public double average=0;
-    public double highest=0;
-    public double lowest=0;
+    int subject1 = 0;
+    int subject2 = 0;
+    int subject3 = 0;
+
+    public double average = 0;
+    public double highest = 0;
+    public double lowest = 0;
     public String names;
-    
+
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
+        if(txtName.getText().equals(null) || s1.getText().equals(null) || s2.getText().equals(null) || s1.getText().equals(null)){
+            
+            JOptionPane.showMessageDialog(null, "Missing Fields.");
+            
+        }else{
         name=txtname.getText();
         subject1=Integer.valueOf(s1.getText());
         subject2=Integer.valueOf(s2.getText());
@@ -336,7 +341,7 @@ public class GradeTrack extends javax.swing.JFrame {
         a.setText(""+average);
         b.setText(""+highest);
         c.setText(""+lowest);
-
+             }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -345,7 +350,7 @@ public class GradeTrack extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        
+
         int a = JOptionPane.showConfirmDialog(null, "Do you really want to exit.", "Select", JOptionPane.YES_NO_OPTION);
 
         if (a == 0) {
