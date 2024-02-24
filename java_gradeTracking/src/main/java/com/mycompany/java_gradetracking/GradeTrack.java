@@ -304,7 +304,7 @@ public class GradeTrack extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-        if(txtName.getText().equals(null) || s1.getText().equals(null) || s2.getText().equals(null) || s1.getText().equals(null)){
+        if(txtName.getText().equals("") || s1.getText().equals("") || s2.getText().equals("") || s3.getText().equals("")){
             
             JOptionPane.showMessageDialog(null, "Missing Fields.");
             
